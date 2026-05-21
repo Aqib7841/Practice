@@ -1,0 +1,12 @@
+#!/bin/bash
+
+for log in ~/logfiles/*.log.tar.gz
+do
+  tar -xvf $log -C /
+  if [ $? -eq 0 ]
+  then
+       echo "Code execution Sucessful"
+  else
+       echo "Code execution Failed"
+  fi
+done
